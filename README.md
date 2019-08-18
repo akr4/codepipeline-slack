@@ -20,7 +20,7 @@ Update your AWS environment with Terraform
 
 ### Build the Lambda function
 The following command builds the Lambda function in a Docker environment.
-```
+```sh
 docker run --rm -v ${PWD}:/code -v \
   ${HOME}/.cargo/registry:/root/.cargo/registry -v \
   ${HOME}/.cargo/git:/root/.cargo/git softprops/lambda-rust
@@ -31,10 +31,12 @@ The zipped Lambda function will be at `./target/lambda/release/codepipeline-slac
 ### Set up a Slack webhook URL to SSM parameter store
 The Lambda function looks for a Slack's webhook URL from SSM parameter store. The parameter name can be configured by a Terraform variable.
 
-name
-	/codepipeline-slack/webhook-url-ssm-param
-value (SecureString is recommended)
-	https:....
+<dl>
+  <dt>name</dt>
+  <dd>/codepipeline-slack/webhook-url-ssm-param</dd>
+  <dt>value  (SecureString is recommended)</dt>
+  <dd>https:....</dd>
+</dl>
 
 ### Update your AWS environment with Terraform
 First, copy `terraform` directory to your Terraform directory. And then add a module block to your Terraform configuration file:
@@ -46,10 +48,11 @@ module "codepipeline-slack" {
 }
 ```
 
-`slack_webhook_url_ssm_parameter`
-	The SSM parameter name which is configured in the previous section
-
-`lambda_zip_file`
-	Path to the Lambda zip file
+<dl>
+  <dt>slack_webhook_url_ssm_parameter</dt>
+  <dd>The SSM parameter name which is configured in the previous section/dd>
+  <dt>lambda_zip_file</dt>
+  <dd>Path to the Lambda zip file</dd>
+</dl>
 
 Now you can apply the configuration by `terraform apply`.
