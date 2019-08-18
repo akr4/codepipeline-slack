@@ -50,7 +50,7 @@ module "codepipeline-slack" {
 
 <dl>
   <dt>slack_webhook_url_ssm_parameter</dt>
-  <dd>The SSM parameter name which is configured in the previous section/dd>
+  <dd>The SSM parameter name which is configured in the previous section</dd>
   <dt>lambda_zip_file</dt>
   <dd>Path to the Lambda zip file</dd>
 </dl>
