@@ -14,9 +14,9 @@ The repository includes a lambda function and a Terraform module, so it's easy t
 - Docker
 
 ## Set up
-Build the Lambda function
-Set up a Slack webhook URL to SSM parameter store
-Update your AWS environment with Terraform
+1. Build the Lambda function
+2. Set up a Slack webhook URL to SSM parameter store
+3. Update your AWS environment with Terraform
 
 ### Build the Lambda function
 The following command builds the Lambda function in a Docker environment.
