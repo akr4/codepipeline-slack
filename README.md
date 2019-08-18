@@ -3,11 +3,11 @@ Notify CodePipeline status changes such as STARTED, SUCCEEDED, FAILED, and so on
 
 The repository includes a lambda function and a Terraform module, so it's easy to set up in your environment.
 
-![Example Slack messages](https://raw.githubusercontent.com/akr4/codepipeline-slack/images/screenshot.png)
+<img src="https://raw.githubusercontent.com/akr4/codepipeline-slack/images/screenshot.png" alt="Example Slack messages" width="393">
 
 ## Overview
 
-![Overview](https://raw.githubusercontent.com/akr4/codepipeline-slack/images/overview.png)
+<img src="https://raw.githubusercontent.com/akr4/codepipeline-slack/images/overview.png" alt="Overview" width="500">
 
 ## Prerequisite
 - Terraform 0.12
