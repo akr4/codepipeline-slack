@@ -10,11 +10,10 @@ The repository includes a lambda function and a Terraform module, so it's easy t
 ![Overview](https://raw.githubusercontent.com/akr4/codepipeline-slack/images/overview.png)
 
 ## Prerequisite
-Terraform 0.12
-Docker
+- Terraform 0.12
+- Docker
 
 ## Set up
-
 Build the Lambda function
 Set up a Slack webhook URL to SSM parameter store
 Update your AWS environment with Terraform
@@ -39,7 +38,7 @@ value (SecureString is recommended)
 
 ### Update your AWS environment with Terraform
 First, copy `terraform` directory to your Terraform directory. And then add a module block to your Terraform configuration file:
-```
+```HCL
 module "codepipeline-slack" {
   source                          = "../modules/codepipeline-slack"
   slack_webhook_url_ssm_parameter = "/codepipeline-slack/webhook-url-ssm-param"
@@ -54,4 +53,3 @@ module "codepipeline-slack" {
 	Path to the Lambda zip file
 
 Now you can apply the configuration by `terraform apply`.
-
