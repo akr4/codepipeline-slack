@@ -7,7 +7,7 @@ The repository includes a lambda function and a Terraform module, so it's easy t
 
 ## Overview
 
-<img src="https://raw.githubusercontent.com/akr4/codepipeline-slack/master/docs/overview.png" alt="Overview" width="500">
+<img src="https://raw.githubusercontent.com/akr4/codepipeline-slack/master/docs/overview.png" alt="Overview" width="600">
 
 ## Prerequisite
 - Terraform 0.12
